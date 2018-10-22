@@ -1,3 +1,6 @@
+[![Build status](https://ci.appveyor.com/api/projects/status/nrvk81jcwu6f5a3l?svg=true)](https://ci.appveyor.com/project/suadev/responsemasking-aspnetcore-filter)
+
+
 ## A filter attribute for response model masking. 
 
 Supports?
@@ -10,16 +13,16 @@ How to?
 
 ## Model
 
-![alt text](https://github.com/suadev/ResponseMasking.AspNetCore.Filter/blob/master/screenshots/userModel.JPG)
+![alt text](https://github.com/suadev/ResponseMasking.AspNetCore.Filter/blob/master/src/screenshots/userModel.JPG)
 
 ## Sample Response
 
-![alt text](https://github.com/suadev/ResponseMasking.AspNetCore.Filter/blob/master/screenshots/fakeData.JPG)
+![alt text](https://github.com/suadev/ResponseMasking.AspNetCore.Filter/blob/master/src/screenshots/fakeData.JPG)
 
 ## Using In Controller
 
-![alt text](https://github.com/suadev/ResponseMasking.AspNetCore.Filter/blob/master/screenshots/controller.JPG)
+![alt text](https://github.com/suadev/ResponseMasking.AspNetCore.Filter/blob/master/src/screenshots/controller.JPG)
 
 ## Postman Result
 
-![alt text](https://github.com/suadev/ResponseMasking.AspNetCore.Filter/blob/master/screenshots/postman.JPG)
+![alt text](https://github.com/suadev/ResponseMasking.AspNetCore.Filter/blob/master/src/screenshots/postman.JPG)
