@@ -1,7 +1,7 @@
 [![Build status](https://ci.appveyor.com/api/projects/status/nrvk81jcwu6f5a3l?svg=true)](https://ci.appveyor.com/project/suadev/responsemasking-aspnetcore-filter)
 
 
-## A filter attribute for response model masking. 
+## An Asp.net Core MVC filter attribute for response model masking. 
 
 Supports;
 
