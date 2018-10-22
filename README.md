@@ -3,13 +3,13 @@
 
 ## A filter attribute for response model masking. 
 
-Supports?
+Supports;
 
 - Generic List,
 - Plaint Text
 - Complex Types
 
-How to?
+Usage Exaample;
 
 ## Model
 
