@@ -8,7 +8,7 @@ build_script:
   - cmd: dotnet publish ./src/ResponseMasking.AspNetCore.Filter.csproj
 after_build:
   # - choco install "msbuild-sonarqube-runner" -y
-  # - dotnet tool install --global dotnet-sonarscanner
+  - dotnet tool install --global dotnet-sonarscanner
   - dotnet sonarscanner begin /k:"suadev_ResponseMasking.AspNetCore.Filter" /d:sonar.organization="suadev-github" /d:sonar.host.url="https://sonarcloud.io" /d:sonar.login="0badbeff3050b5d79c318ca1bf62980d65f5edb7"
   - dotnet build
   - dotnet sonarscanner end /d:sonar.login="0badbeff3050b5d79c318ca1bf62980d65f5edb7"
