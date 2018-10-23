@@ -8,3 +8,8 @@ before_build:
   - cmd: dotnet restore ./src/ResponseMasking.AspNetCore.Filter.csproj --verbosity m
 build_script:
   - cmd: dotnet publish ./src/ResponseMasking.AspNetCore.Filter.csproj
+after_build:
+  - choco install "msbuild-sonarqube-runner" -y
+  - SonarScanner.MSBuild.exe begin /k:"suadev_ResponseMasking.AspNetCore.Filter" /d:sonar.organization="suadev-github" /d:sonar.host.url="https://sonarcloud.io" /d:sonar.login="0badbeff3050b5d79c318ca1bf62980d65f5edb7"
+  - MsBuild.exe /t:Rebuild
+  - SonarScanner.MSBuild.exe end /d:sonar.login="0badbeff3050b5d79c318ca1bf62980d65f5edb7"
