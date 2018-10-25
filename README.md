@@ -7,9 +7,9 @@
 
 Supports;
 
-    Generic List,
-    Plaint Text
-    Complex Types
+- Generic List
+- Plaint Text
+- Complex Types
 
 Example for Generic List Response;
 
