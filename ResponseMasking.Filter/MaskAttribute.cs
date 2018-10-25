@@ -1,6 +1,6 @@
 using System;
 
-namespace ResponseMasking.AspNetCore.Filter.Attributes
+namespace ResponseMasking.Filter
 {
     [AttributeUsage(AttributeTargets.Constructor | AttributeTargets.Property)]
     public class MaskAttribute : Attribute

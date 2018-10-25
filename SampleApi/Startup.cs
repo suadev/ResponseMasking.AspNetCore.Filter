@@ -39,8 +39,6 @@ namespace ResponseMasking.AspNetCore.Filter
             {
                 app.UseHsts();
             }
-
-            app.UseHttpsRedirection();
             app.UseMvc();
         }
     }

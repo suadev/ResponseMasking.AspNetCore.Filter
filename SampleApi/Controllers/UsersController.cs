@@ -1,7 +1,7 @@
 ﻿using System.Linq;
 using ResponseMasking.AspNetCore.Filter.Faker;
 using Microsoft.AspNetCore.Mvc;
-using ResponseMasking.AspNetCore.Filter.Filters;
+using ResponseMasking.Filter;
 
 namespace ResponseMasking.AspNetCore.Filter.Controllers
 {
@@ -32,7 +32,6 @@ namespace ResponseMasking.AspNetCore.Filter.Controllers
             var result = UserModelFaker.GetUsers().Where(q => q.Age > 2).AsQueryable();
             return Ok(result);
         }
-
 
         /// <summary>
         /// Complex type sample

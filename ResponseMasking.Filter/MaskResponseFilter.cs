@@ -4,9 +4,8 @@ using System.Linq;
 using System.Reflection;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Filters;
-using ResponseMasking.AspNetCore.Filter.Attributes;
 
-namespace ResponseMasking.AspNetCore.Filter.Filters
+namespace ResponseMasking.Filter
 {
     public class MaskResponseFilterAttribute : Attribute, IActionFilter
     {

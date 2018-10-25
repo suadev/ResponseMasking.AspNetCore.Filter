@@ -7,7 +7,7 @@
             "type": "process",
             "args": [
                 "build",
-                "${workspaceFolder}/ResponseMasking.AspNetCore.Filter.csproj"
+                "${workspaceFolder}/SampleApi/ResponseMasking.AspNetCore.Filter.csproj"
             ],
             "problemMatcher": "$msCompile"
         },
@@ -17,7 +17,7 @@
             "type": "process",
             "args": [
                 "build",
-                "${workspaceFolder}/ResponseMasking.AspNetCore.Filter.csproj"
+                "${workspaceFolder}/SampleApi/ResponseMasking.AspNetCore.Filter.csproj"
             ],
             "problemMatcher": "$msCompile"
         }

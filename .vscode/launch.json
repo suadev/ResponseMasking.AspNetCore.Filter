@@ -10,7 +10,7 @@
             "request": "launch",
             "preLaunchTask": "build",
             // If you have changed target frameworks, make sure to update the program path.
-            "program": "${workspaceFolder}/bin/Debug/netcoreapp2.1/ResponseMasking.AspNetCore.Filter.dll",
+            "program": "${workspaceFolder}/SampleApi/bin/Debug/netcoreapp2.1/SampleApi.dll",
             "args": [],
             "cwd": "${workspaceFolder}",
             "stopAtEntry": false,
@@ -47,7 +47,7 @@
             "type": "coreclr",
             "request": "launch",
             "preLaunchTask": "build",
-            "program": "${workspaceFolder}/bin/Debug/netcoreapp2.1/ResponseMasking.AspNetCore.Filter.dll",
+            "program": "${workspaceFolder}/SampleApi/bin/Debug/netcoreapp2.1/SampleApi.dll",
             "args": [],
             "cwd": "${workspaceFolder}",
             "stopAtEntry": false,

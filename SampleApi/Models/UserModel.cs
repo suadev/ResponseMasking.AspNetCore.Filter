@@ -1,4 +1,4 @@
-using ResponseMasking.AspNetCore.Filter.Attributes;
+using ResponseMasking.Filter;
 
 namespace ResponseMasking.AspNetCore.Filter.Models
 {

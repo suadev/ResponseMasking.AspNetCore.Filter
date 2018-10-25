@@ -3,7 +3,7 @@
 <img width="100" src="https://sonarcloud.io/images/project_badges/sonarcloud-orange.svg" />
 
 
-## An Asp.net Core MVC filter attribute for response model masking. 
+## Asp.net Core MVC filter attribute for response masking. 
 
 Supports;
 
@@ -15,16 +15,16 @@ Usage Exaample;
 
 ## Model
 
-![alt text](https://github.com/suadev/ResponseMasking.AspNetCore.Filter/blob/master/src/screenshots/userModel.JPG)
+![alt text](https://github.com/suadev/ResponseMasking.AspNetCore.Filter/blob/master/SampleApi/screenshots/userModel.JPG)
 
 ## Sample Response
 
-![alt text](https://github.com/suadev/ResponseMasking.AspNetCore.Filter/blob/master/src/screenshots/fakeData.JPG)
+![alt text](https://github.com/suadev/ResponseMasking.AspNetCore.Filter/blob/master/SampleApi/screenshots/fakeData.JPG)
 
 ## Using In Controller
 
-![alt text](https://github.com/suadev/ResponseMasking.AspNetCore.Filter/blob/master/src/screenshots/controller.JPG)
+![alt text](https://github.com/suadev/ResponseMasking.AspNetCore.Filter/blob/master/SampleApi/screenshots/controller.JPG)
 
 ## Postman Result
 
-![alt text](https://github.com/suadev/ResponseMasking.AspNetCore.Filter/blob/master/src/screenshots/postman.JPG)
+![alt text](https://github.com/suadev/ResponseMasking.AspNetCore.Filter/blob/master/SampleApi/screenshots/postman.JPG)
