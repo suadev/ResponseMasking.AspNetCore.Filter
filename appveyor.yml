@@ -3,9 +3,9 @@ branches:
   - master
 before_build:
   - cmd: dotnet --version
-  - cmd: dotnet restore ./SampleApi/ResponseMasking.AspNetCore.Filter.csproj --verbosity m
+  - cmd: dotnet restore ./SampleApi/SampleApi.csproj --verbosity m
 build_script:
-  - cmd: dotnet publish ./SampleApi/ResponseMasking.AspNetCore.Filter.csproj
+  - cmd: dotnet publish ./SampleApi/SampleApi.csproj
 after_build:
   # - choco install "msbuild-sonarqube-runner" -y
   - dotnet tool install --global dotnet-sonarscanner
