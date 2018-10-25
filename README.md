@@ -7,24 +7,24 @@
 
 Supports;
 
-- Generic List,
-- Plaint Text
-- Complex Types
+    Generic List,
+    Plaint Text
+    Complex Types
 
-Usage Exaample;
+Example for Generic List Response;
 
-## Model
+### Model
 
 ![alt text](https://github.com/suadev/ResponseMasking.AspNetCore.Filter/blob/master/SampleApi/screenshots/userModel.JPG)
 
-## Sample Response
+### Sample Response
 
 ![alt text](https://github.com/suadev/ResponseMasking.AspNetCore.Filter/blob/master/SampleApi/screenshots/fakeData.JPG)
 
-## Using In Controller
+### Using In Controller
 
 ![alt text](https://github.com/suadev/ResponseMasking.AspNetCore.Filter/blob/master/SampleApi/screenshots/controller.JPG)
 
-## Postman Result
+### Postman Result
 
 ![alt text](https://github.com/suadev/ResponseMasking.AspNetCore.Filter/blob/master/SampleApi/screenshots/postman.JPG)
