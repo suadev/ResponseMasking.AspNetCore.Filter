@@ -34,30 +34,42 @@ namespace ResponseMasking.Filter
             if (okResult == null)
                 return;
 
-            var response = okResult.Value;
-            var typeName = response.GetType().Name;
-
-            if (typeName.Contains("List") || typeName.Contains("EnumerableQuery")) // generic list
+            var type = okResult.Value.GetType();
+            if (type.IsGenericType && type.GetInterfaces().Contains(typeof(IEnumerable)))
             {
-                foreach (var item in response as IEnumerable)
+                if (okResult.Value is IEnumerable) // generic list
                 {
-                    CheckPropertiesForMasking(item);
+                    foreach (var item in okResult.Value as IEnumerable)
+                    {
+                        CheckPropertiesForMasking(item);
+                    }
+                }
+                else // paged list?
+                {
+                    var prop = okResult.Value.GetType().GetProperties().FirstOrDefault(q => q.PropertyType.Name.Contains("IEnumerable"));
+                    if (prop != null)
+                    {
+                        foreach (var item in (IEnumerable)prop.GetValue(okResult.Value, null))
+                        {
+                            CheckPropertiesForMasking(item);
+                        }
+                    }
                 }
             }
-            else if (response.GetType().Name == "String") // plain text
+            else if (type.Name == "String") // plain text
             {
-                var firstValue = response as String;
+                var firstValue = okResult.Value as String;
                 okResult.Value = firstValue.Substring(this.MaskLength).PadLeft(firstValue.Length, this.MaskChar);
             }
             else // complex type
             {
-                CheckPropertiesForMasking(response);
+                CheckPropertiesForMasking(okResult.Value);
             }
         }
 
-        private static void CheckPropertiesForMasking(object response)
+        private static void CheckPropertiesForMasking(object item)
         {
-            var props = response.GetType().GetProperties();
+            var props = item.GetType().GetProperties();
             foreach (var prop in props)
             {
                 var maskAttrData = prop.GetCustomAttributes(true).FirstOrDefault(q => q is MaskAttribute);
@@ -69,9 +81,9 @@ namespace ResponseMasking.Filter
                     throw new TypeAccessException("Only string type can be masked.");
                 }
 
-                var firstValue = prop.GetValue(response).ToString();
+                var firstValue = (string)prop.GetValue(item, null);
                 var lastValue = GetMaskedValue((MaskAttribute)maskAttrData, firstValue);
-                prop.SetValue(response, lastValue);
+                prop.SetValue(item, lastValue, null);
             }
         }
 
