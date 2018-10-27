@@ -11,7 +11,7 @@ Supports;
 - Generic List
 - Generic Paged List
 - Plaint Text
-- Complex Types (not so complex (: ))
+- Complex Types (not so complex (: )
 
 
 Example for Generic List Response;
