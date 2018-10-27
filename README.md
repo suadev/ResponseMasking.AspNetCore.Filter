@@ -38,7 +38,7 @@ Example for Generic List Response;
 
 ### Postman Result (Single Item) - http://localhost:5000/api/users/1
 
-![alt text](https://github.com/suadev/ResponseMasking.AspNetCore.Filter/blob/master/SampleApi/screenshots/postmanSignle.JPG)
+![alt text](https://github.com/suadev/ResponseMasking.AspNetCore.Filter/blob/master/SampleApi/screenshots/postmanSingle.JPG)
 
 ### Postman Result (Plain Text) - http://localhost:5000/api/users/1/citizenshipnumber
 
