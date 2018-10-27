@@ -10,7 +10,7 @@ Supports;
 
 - Generic List
 - Generic Paged List
-- Plaint Text
+- Plain Text
 - Complex Types (not so complex (: )
 
 
