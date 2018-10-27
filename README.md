@@ -9,8 +9,10 @@
 Supports;
 
 - Generic List
+- Generic Paged List
 - Plaint Text
-- Complex Types
+- Complex Types (not so complex (: ))
+
 
 Example for Generic List Response;
 
@@ -26,6 +28,18 @@ Example for Generic List Response;
 
 ![alt text](https://github.com/suadev/ResponseMasking.AspNetCore.Filter/blob/master/SampleApi/screenshots/controller.JPG)
 
-### Postman Result
+### Postman Result - http://localhost:5000/api/users
 
 ![alt text](https://github.com/suadev/ResponseMasking.AspNetCore.Filter/blob/master/SampleApi/screenshots/postman.JPG)
+
+### Postman Result (Paged List) - http://localhost:5000/api/users/pagedlist
+
+![alt text](https://github.com/suadev/ResponseMasking.AspNetCore.Filter/blob/master/SampleApi/screenshots/postmantPaged.JPG)
+
+### Postman Result (Single Item) - http://localhost:5000/api/users/1
+
+![alt text](https://github.com/suadev/ResponseMasking.AspNetCore.Filter/blob/master/SampleApi/screenshots/postmanSignle.JPG)
+
+### Postman Result (Plain Text) - http://localhost:5000/api/users/1/citizenshipnumber
+
+![alt text](https://github.com/suadev/ResponseMasking.AspNetCore.Filter/blob/master/SampleApi/screenshots/postmanPlainText.JPG)

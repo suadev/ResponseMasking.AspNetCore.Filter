@@ -44,17 +44,6 @@ namespace ResponseMasking.Filter
                         CheckPropertiesForMasking(item);
                     }
                 }
-                else // paged list?
-                {
-                    var prop = okResult.Value.GetType().GetProperties().FirstOrDefault(q => q.PropertyType.Name.Contains("IEnumerable"));
-                    if (prop != null)
-                    {
-                        foreach (var item in (IEnumerable)prop.GetValue(okResult.Value, null))
-                        {
-                            CheckPropertiesForMasking(item);
-                        }
-                    }
-                }
             }
             else if (type.Name == "String") // plain text
             {
@@ -63,7 +52,22 @@ namespace ResponseMasking.Filter
             }
             else // complex type
             {
-                CheckPropertiesForMasking(okResult.Value);
+                if (type.IsGenericType) // paged list?
+                {
+                    var prop = okResult.Value.GetType().GetProperties().FirstOrDefault(q =>
+                                                 q.PropertyType.GetTypeInfo().ImplementedInterfaces.Contains(typeof(IEnumerable)));
+                    if (prop == null)
+                        return;
+
+                    foreach (var item in (IEnumerable)prop.GetValue(okResult.Value, null))
+                    {
+                        CheckPropertiesForMasking(item);
+                    }
+                }
+                else
+                {
+                    CheckPropertiesForMasking(okResult.Value);
+                }
             }
         }
 

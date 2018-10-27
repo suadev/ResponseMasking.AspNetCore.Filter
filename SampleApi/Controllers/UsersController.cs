@@ -2,6 +2,8 @@
 using ResponseMasking.AspNetCore.Filter.Faker;
 using Microsoft.AspNetCore.Mvc;
 using ResponseMasking.Filter;
+using ResponseMasking.AspNetCore.Filter.Models;
+using SampleApi.Models;
 
 namespace ResponseMasking.AspNetCore.Filter.Controllers
 {
@@ -19,6 +21,23 @@ namespace ResponseMasking.AspNetCore.Filter.Controllers
         {
             var result = UserModelFaker.GetUsers();
             return Ok(result);
+        }
+
+        /// <summary>
+        /// Generic Paged List sample
+        /// </summary>
+        /// <returns></returns>
+        [HttpGet("pagedlist")]
+        [MaskResponseFilter]
+        public IActionResult GetPagedList()
+        {
+            var pagedList = new GenericPagedList<UserModel>();
+            pagedList.Items = UserModelFaker.GetUsers();
+            pagedList.PageIndex = 0;
+            pagedList.PageSize = 10;
+            pagedList.TotalCount = 3;
+            pagedList.TotalPages = 1;
+            return Ok(pagedList);
         }
 
         /// <summary>
